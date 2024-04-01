@@ -1,0 +1,116 @@
+.banner-header {
+    width: 100%;
+    background: rgb(246, 245, 245);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px #c8c8c8 solid;
+    height: 600px;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    /* scroll-behavior: smooth; */
+}
+
+.slider-banner {
+    width: 100%;
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-header:hover .slider-btn .next-btn,
+.banner-header:hover .slider-btn .prev-btn {
+    display: block;
+    animation: blur .3s linear;
+}
+
+.left-banner {
+    animation: none;
+}
+
+.left-banner.active {
+    animation: contentIn .4s linear;
+}
+
+.left-banner-title h1 {
+    font-size: 50px;
+}
+
+.left-banner-title h4 {
+    letter-spacing: 5px;
+    font-size: 25px;
+    color: #4f4f4f;
+}
+
+.left-banner-title h4 span {
+    color: var(--default-color)
+}
+
+.left-banner-btn button {
+    width: 50%;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+.right-banner {
+    height: 600px;
+    width: 600px;
+    object-fit: cover;
+    transition: transform .6s linear;
+}
+
+.right-banner:hover {
+    transform: scale(1.2);
+}
+
+.right-banner.active {
+    animation: slideIn .8s linear;
+}
+
+.slider-btn {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top :50%;
+    transform: translateY(-50%);
+}
+
+.slider-btn div ion-icon {
+    font-size: 50px;
+    color: #4f4f4f;
+    cursor: pointer;
+}
+
+.next-btn,
+.prev-btn {
+    display: none;
+}
+
+.next-btn {
+    margin-right: 10px;
+}
+
+.prev-btn {
+    margin-left: 10px;
+}
+
+.next-btn:hover {
+    transform: translateX(10px);
+}
+
+.prev-btn:hover {
+    transform: translateX(-10px);
+}
